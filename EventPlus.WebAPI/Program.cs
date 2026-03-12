@@ -1,6 +1,6 @@
 using EventPlu.WebAPI.BdContextEvent;
-using EventPlus.WebAPI.Interfaces;
-using EventPlus.WebAPI.Repositories;
+using EventPlu.WebAPI.Interfaces;
+using EventPlu.WebAPI.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 

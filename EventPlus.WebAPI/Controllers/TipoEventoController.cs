@@ -1,5 +1,5 @@
-﻿using EventPlus.WebAPI.Models;
-using EventPlus.WebAPI.Interfaces;
+﻿using EventPlu.WebAPI.Models;
+using EventPlu.WebAPI.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using EventPlus.WebAPI.DTO;

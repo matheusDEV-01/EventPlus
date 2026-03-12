@@ -1,8 +1,9 @@
 ﻿using EventPlu.WebAPI.BdContextEvent;
-using EventPlus.WebAPI.Models;
-using EventPlus.WebAPI.Interfaces;
+using EventPlu.WebAPI.Models;
+using EventPlu.WebAPI.Interfaces;
 
-namespace EventPlus.WebAPI.Repositories;
+
+namespace EventPlu.WebAPI.Repositories;
 
 public class TipoEventoRepository :
     ITipoEventoRepository

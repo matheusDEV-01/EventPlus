@@ -1,6 +1,6 @@
-﻿using EventPlus.WebAPI.Models;
+﻿using EventPlu.WebAPI.Models;
 
-namespace EventPlus.WebAPI.Interfaces;
+namespace EventPlu.WebAPI.Interfaces;
 
 public interface ITipoEventoRepository
 {

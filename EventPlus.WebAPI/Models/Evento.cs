@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EventPlu.WebAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -37,7 +38,7 @@ public partial class Evento
 
     [ForeignKey("IdTipoEvento")]
     [InverseProperty("Eventos")]
-    public virtual TipoEventoDTO? IdTipoEventoNavigation { get; set; }
+    public virtual TipoEvento? IdTipoEventoNavigation { get; set; }
 
     [InverseProperty("IdEventoNavigation")]
     [JsonIgnore]

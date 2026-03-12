@@ -1,6 +1,6 @@
 ﻿using EventPlu.WebAPI.Models;
 
-namespace EventPlus.WebAPI.Interfaces;
+namespace EventPlu.WebAPI.Interfaces;
 
 public interface IInstituicaoRepository
 {

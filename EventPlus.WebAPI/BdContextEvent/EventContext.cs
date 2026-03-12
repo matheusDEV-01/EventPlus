@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using EventPlu.WebAPI.Models;
-using EventPlus.WebAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace EventPlus.WebAPI.BdContextEvent;
+namespace EventPlu.WebAPI.BdContextEvent;
 
 public partial class EventContext : DbContext
 {
-    internal object instituicao;
 
     public EventContext()
     {
@@ -27,7 +25,7 @@ public partial class EventContext : DbContext
 
     public virtual DbSet<Presenca> Presencas { get; set; }
 
-    public virtual DbSet<TipoEventoDTO> TipoEventos { get; set; }
+    public virtual DbSet<TipoEvento> TipoEventos { get; set; }
 
     public virtual DbSet<TipoUsuario> TipoUsuarios { get; set; }
 
@@ -79,7 +77,7 @@ public partial class EventContext : DbContext
             entity.HasOne(d => d.IdUsuarioNavigation).WithMany(p => p.Presencas).HasConstraintName("FK__Presenca__IdUsua__5EBF139D");
         });
 
-        modelBuilder.Entity<TipoEventoDTO>(entity =>
+        modelBuilder.Entity<TipoEvento>(entity =>
         {
             entity.HasKey(e => e.IdTipoEvento).HasName("PK__TipoEven__CDB3A3BE6CA7E89E");
 
