@@ -2,7 +2,7 @@
 using EventPlu.WebAPI.Interfaces;
 using EventPlu.WebAPI.Models;
 
-namespace EventPlus.WebAPI.Repositories;
+namespace EventPlu.WebAPI.Repositories;
 
 public class TipoUsuarioRepository : ITipoUsuarioRepository
 {
@@ -47,7 +47,6 @@ public class TipoUsuarioRepository : ITipoUsuarioRepository
     /// 
     /// </summary>
     /// <param name="tipoUsuario"></param>
-    /// <exception cref="NotImplementedException"></exception>
     public void Cadastrar(TipoUsuario tipoUsuario)
     {
         _context.TipoUsuarios.Add(tipoUsuario);

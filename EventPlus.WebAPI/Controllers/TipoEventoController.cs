@@ -2,9 +2,9 @@
 using EventPlu.WebAPI.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using EventPlus.WebAPI.DTO;
+using EventPlu.WebAPI.DTO;
 
-namespace EventPlus.WebAPI.Controllers;
+namespace EventPlu.WebAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -65,16 +65,16 @@ public class TipoEventoController : ControllerBase
     /// <returns>Status code 201 e e tipo de eventos cadastrado</returns>
 
     [HttpPost]
-    public IActionResult Cadastrar(TipoEventoDTO tipoEvento)
+    public IActionResult Cadastrar(TipoEventoDTO tipoEvento) // O parâmetro do tipo TipoEventoDTO é usado para receber os dados do tipo de evento a ser cadastrado
     {
         try
         {
-            var novoTipoEvento = new TipoEvento
+            var novoTipoEvento = new TipoEvento // Cria um novo objeto do tipo TipoEvento usando os dados recebidos no parâmetro tipoEvento
             {
-                Titulo = tipoEvento.Titulo!
+                Titulo = tipoEvento.Titulo! // O operador de negação (!) é usado para indicar que a propriedade Titulo não pode ser nula, garantindo que um valor válido seja atribuído a ela
             };
 
-            _tipoEventoRepository.Cadastrar(novoTipoEvento);
+            _tipoEventoRepository.Cadastrar(novoTipoEvento); // Chama o método Cadastrar do repositório para salvar o novo tipo de evento no banco de dados
             return StatusCode(201, novoTipoEvento);
         }
         catch (Exception erro)
@@ -92,11 +92,16 @@ public class TipoEventoController : ControllerBase
     /// <returns></returns>
 
     [HttpPut("{id}")]
-    public IActionResult Atualizar(Guid id, TipoEvento tipoEvento)
+    public IActionResult Atualizar(Guid id, TipoEventoDTO tipoEvento)
     {
         try
         {
-            _tipoEventoRepository.Atualizar(id, tipoEvento);
+            var tipoEventoAtualizado = new TipoEvento
+            {
+                Titulo = tipoEvento.Titulo!
+            };
+
+            _tipoEventoRepository.Atualizar(id, tipoEventoAtualizado);
             return StatusCode(204, tipoEvento);
         }
         catch (Exception erro)

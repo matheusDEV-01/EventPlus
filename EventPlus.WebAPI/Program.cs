@@ -16,6 +16,8 @@ builder.Services.AddOpenApi();
 
 //Registrar os reposirories para injeção de dependência
 builder.Services.AddScoped<ITipoEventoRepository, TipoEventoRepository>();
+builder.Services.AddScoped<ITipoUsuarioRepository, TipoUsuarioRepository>();
+builder.Services.AddScoped<IInstituicaoRepository, InstituicaoRepository>();
 
 
 

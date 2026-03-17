@@ -3,7 +3,7 @@ using EventPlu.WebAPI.Models;
 using EventPlu.WebAPI.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace EventPlus.WebAPI.Repositories;
+namespace EventPlu.WebAPI.Repositories;
 
 public class InstituicaoRepository : IInstituicaoRepository
 
@@ -26,7 +26,9 @@ public class InstituicaoRepository : IInstituicaoRepository
         var instituicaoBuscado = _context.Instituicaos.Find(id);
         if (instituicaoBuscado != null)
         {
-            instituicaoBuscado.NomeFantasia = instituicao.NomeFantasia;
+            instituicaoBuscado.NomeFantasia = String.IsNullOrEmpty(instituicao.NomeFantasia) ? instituicao.NomeFantasia : instituicao.NomeFantasia;
+            instituicaoBuscado.Cnpj = String.IsNullOrEmpty(instituicao.Cnpj) ? instituicao.Cnpj : instituicao.Cnpj;
+            instituicaoBuscado.Endereco = String.IsNullOrEmpty(instituicao.Endereco) ? instituicao.Endereco : instituicao.Endereco;
 
             //O SaveChanges() detecta as mudanças na propriedade "Titulo" automaticamente
             _context.SaveChanges();

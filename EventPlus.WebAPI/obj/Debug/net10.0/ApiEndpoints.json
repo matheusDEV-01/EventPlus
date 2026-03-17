@@ -1,6 +1,85 @@
 [
   {
-    "ContainingType": "EventPlus.WebAPI.Controllers.TipoEventoController",
+    "ContainingType": "EventPlu.WebAPI.Controllers.InstituicaoController",
+    "Method": "Listar",
+    "RelativePath": "api/Instituicao",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlu.WebAPI.Controllers.InstituicaoController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/Instituicao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "instituicao",
+        "Type": "EventPlu.WebAPI.DTO.InstituicaoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlu.WebAPI.Controllers.InstituicaoController",
+    "Method": "BuscarPorId",
+    "RelativePath": "api/Instituicao/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlu.WebAPI.Controllers.InstituicaoController",
+    "Method": "Atualizar",
+    "RelativePath": "api/Instituicao/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "instituicao",
+        "Type": "EventPlu.WebAPI.DTO.InstituicaoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlu.WebAPI.Controllers.InstituicaoController",
+    "Method": "Deletar",
+    "RelativePath": "api/Instituicao/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlu.WebAPI.Controllers.TipoEventoController",
     "Method": "Listar",
     "RelativePath": "api/TipoEvento",
     "HttpMethod": "GET",
@@ -10,7 +89,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "EventPlus.WebAPI.Controllers.TipoEventoController",
+    "ContainingType": "EventPlu.WebAPI.Controllers.TipoEventoController",
     "Method": "Cadastrar",
     "RelativePath": "api/TipoEvento",
     "HttpMethod": "POST",
@@ -19,14 +98,14 @@
     "Parameters": [
       {
         "Name": "tipoEvento",
-        "Type": "EventPlus.WebAPI.DTO.TipoEventoDTO",
+        "Type": "EventPlu.WebAPI.DTO.TipoEventoDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "EventPlus.WebAPI.Controllers.TipoEventoController",
+    "ContainingType": "EventPlu.WebAPI.Controllers.TipoEventoController",
     "Method": "BuscarPorId",
     "RelativePath": "api/TipoEvento/{id}",
     "HttpMethod": "GET",
@@ -42,7 +121,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "EventPlus.WebAPI.Controllers.TipoEventoController",
+    "ContainingType": "EventPlu.WebAPI.Controllers.TipoEventoController",
     "Method": "Atualizar",
     "RelativePath": "api/TipoEvento/{id}",
     "HttpMethod": "PUT",
@@ -56,16 +135,95 @@
       },
       {
         "Name": "tipoEvento",
-        "Type": "EventPlu.WebAPI.Models.TipoEvento",
+        "Type": "EventPlu.WebAPI.DTO.TipoEventoDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "EventPlus.WebAPI.Controllers.TipoEventoController",
+    "ContainingType": "EventPlu.WebAPI.Controllers.TipoEventoController",
     "Method": "Deletar",
     "RelativePath": "api/TipoEvento/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlu.WebAPI.Controllers.TipoUsuarioController",
+    "Method": "Listar",
+    "RelativePath": "api/TipoUsuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlu.WebAPI.Controllers.TipoUsuarioController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/TipoUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoUsuario",
+        "Type": "EventPlu.WebAPI.DTO.TipoUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlu.WebAPI.Controllers.TipoUsuarioController",
+    "Method": "BuscarPorId",
+    "RelativePath": "api/TipoUsuario/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlu.WebAPI.Controllers.TipoUsuarioController",
+    "Method": "Atualizar",
+    "RelativePath": "api/TipoUsuario/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipoUsuario",
+        "Type": "EventPlu.WebAPI.DTO.TipoUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlu.WebAPI.Controllers.TipoUsuarioController",
+    "Method": "Deletar",
+    "RelativePath": "api/TipoUsuario/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
