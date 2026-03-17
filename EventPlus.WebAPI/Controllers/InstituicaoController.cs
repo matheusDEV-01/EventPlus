@@ -13,9 +13,9 @@ public class InstituicaoController : ControllerBase
 {
     private IInstituicaoRepository _instituicaoRepository;
 
-    public InstituicaoController(IInstituicaoRepository tipoinstituicaoRepository)
+    public InstituicaoController(IInstituicaoRepository instituicaoRepository)
     {
-        _instituicaoRepository = tipoinstituicaoRepository;
+        _instituicaoRepository = instituicaoRepository;
     }
 
     /// <summary>
