@@ -67,4 +67,9 @@ public class UsuarioRepository : IUsuarioRepository
         _context.Usuarios.Add(usuario);
         _context.SaveChanges();// Salva as alterações no banco de dados
     }
+
+    public List<Usuario> Listar()
+    {
+        return _context.Usuarios.OrderBy(Usuario => Usuario.Nome).ToList();
+    }
 }

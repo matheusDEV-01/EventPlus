@@ -1,3 +1,4 @@
+using Azure.AI.ContentSafety;
 using EventPlu.WebAPI.BdContextEvent;
 using EventPlu.WebAPI.Interfaces;
 using EventPlu.WebAPI.Repositories;
@@ -5,6 +6,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var endpoint = "https://moderatorservice-marcos.cognitiveservices.azure.com/";
+var apiKey = "";
+
+var client = new ContentSafetyClient(new Uri
+    (endpoint), new Azure.AzureKeyCredential
+    (apiKey));
 
 builder.Services.AddDbContext<EventContext>(options => options.UseSqlServer //inserir a string de conexão do banco de dados aqui, ou usar o appsettings.json para armazenar a string de conexão e ler usando builder.Configuration.GetConnectionString("DefaultConnection")
 (builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -20,6 +28,8 @@ builder.Services.AddScoped<ITipoUsuarioRepository, TipoUsuarioRepository>();
 builder.Services.AddScoped<IInstituicaoRepository, InstituicaoRepository>();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IEventoRepository, EventoRepository>();
+builder.Services.AddScoped<IPresencaRepository, PresencaRepository>();
+builder.Services.AddScoped<IComentarioEventoRepository, ComentarioEventoRepository>();
 
 
 //Adicione o serviço de autenticação JWT

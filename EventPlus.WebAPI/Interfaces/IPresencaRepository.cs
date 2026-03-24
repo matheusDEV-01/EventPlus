@@ -9,7 +9,7 @@ public interface IPresencaRepository
 
         List<Presenca> Listar();
         Presenca BuscarPorId(Guid id);
-    void Atualizar(Guid id);
+    void Atualizar(Guid IdPresencaEvento);
     List<Presenca> ListarMinhas(Guid idUsuario);
      
 }

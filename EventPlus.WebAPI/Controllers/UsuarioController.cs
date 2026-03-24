@@ -1,5 +1,6 @@
 ﻿using EventPlu.WebAPI.Interfaces;
 using EventPlu.WebAPI.Models;
+using EventPlu.WebAPI.Repositories;
 using EventPlus.WebAPI.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -37,6 +38,21 @@ public class UsuarioController : ControllerBase
             return BadRequest(error.Message);
         }
     }
+
+
+    [HttpGet]
+    public IActionResult Listar()
+    {
+        try
+        {
+            return Ok(_usuarioRepository.Listar());
+        }
+        catch (Exception error)
+        {
+            return BadRequest(error.Message);
+        }
+    }
+
 
     /// <summary>
     /// Endpoint da API que faz chamada para o método de cadastrar um novo usuário

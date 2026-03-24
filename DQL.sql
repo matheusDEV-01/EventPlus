@@ -61,3 +61,5 @@ IdEvento UNIQUEIDENTIFIER FOREIGN KEY REFERENCES Evento(IdEvento)
 
 );
 GO
+
+SELECT * FROM Usuario;
